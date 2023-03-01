@@ -1,16 +1,15 @@
 <script>
 export default {
     props: {
-        pic: String,
-        title: String,
         type: String,
-
-    },
+    }
 }
 
 
 </script>
 
-<template></template>
+<template>
+    <h2>{{ type }}</h2>
+</template>
 
 <style scoped></style>
