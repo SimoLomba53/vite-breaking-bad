@@ -1,4 +1,12 @@
 <script>
+export default {
+    props: {
+        pic: String,
+        title: String,
+        type: String,
+
+    },
+}
 
 
 </script>

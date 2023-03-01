@@ -23,7 +23,7 @@ export default {
 
 <template>
   <HeaderPart />
-  <MainPart />
+  <MainPart :cards="cards" />
 </template>
 
 <style scoped></style>

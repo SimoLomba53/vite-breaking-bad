@@ -2,7 +2,7 @@
 import CardList from './CardList.vue';
 
 export default {
-
+  props: { cards: Array },
 
   components: { CardList },
 }
@@ -15,7 +15,7 @@ export default {
     <div>
       <div>
         <li>
-          <CardList v-for="card in cards" />
+          <CardList :cards="cards" />
         </li>
       </div>
     </div>
