@@ -3,8 +3,14 @@ import BaseSearch from './BaseSearch.vue';
 import SingleCard from './SingleCard.vue';
 
 export default {
+    
 
-
+    data(){
+        return{
+            endpoint: "https://db.ygoprodeck.com/api/v7/cardinfo"
+        }
+    },
+     
     props: { cards: Array },
    
 
@@ -13,11 +19,16 @@ export default {
 
     methods:{ 
 
-    searchingFilter(term) {
-        console.log(term);
-    },
+    cardcharacters(response){
+        console.log(response);
     },
 
+    searchingFilter(term) {
+        console.log(term);
+
+        this.cardcharacters(`${this.endpoint}?form=${term}`);
+    },
+    },
  
 };
 
