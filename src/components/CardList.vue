@@ -4,11 +4,21 @@ import SingleCard from './SingleCard.vue';
 
 export default {
 
-    props: { cards: Array },
 
+    props: { cards: Array },
+   
 
     components: { SingleCard, BaseSearch },
+     
 
+    methods:{ 
+
+    searchingFilter(term) {
+        console.log(term);
+    },
+    },
+
+ 
 };
 
 
@@ -16,7 +26,7 @@ export default {
 
 <template>
 
-        <BaseSearch/>        
+        <BaseSearch  @searching="searchingFilter"  />        
 
          <div class="card-conteiner">
           <SingleCard v-for="card in cards" :type="card.archetype" :form="card.type"  :name="card.name"  :pic="card.card_images"/>

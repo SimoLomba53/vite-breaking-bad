@@ -7,7 +7,7 @@
             };
         },
         
-        $emit:["searching"],
+        emits:["searching"],
 
         methods: {
          clear() {
@@ -15,7 +15,7 @@
         },
 
          search(){
-             this.$emit("searching")
+             this.$emit("searching",this.term);
         },
      },
     };
@@ -27,8 +27,8 @@
     <form @submit.prevent="">
     <div class="input-group mb-3">
              <input type="text" v-model="term" class="form-control" placeholder="Search items" aria-label="Recipient's username" aria-describedby="basic-addon2">
-             <button @click="search">SEND</button>
-             <button @click="clear">RESET</button>
+             <button type="button" @click="search">SEARCH</button>
+             <button type="button" @click="clear">RESET</button>
     </div>
     </form>
 </template>

@@ -1,7 +1,6 @@
 <script>
 import HeaderPart from './components/HeaderPart.vue';
 import MainPart from './components/MainPart.vue';
-import BaseSearch from './components/BaseSearch.vue'
 import bootstrap from "../package-lock.json";
 import axios from "axios";
 
