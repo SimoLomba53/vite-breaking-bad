@@ -16,7 +16,7 @@ export default {
 
 <template>
     <div>
-        <SingleCard v-for="card in cards" :type="card.archetype" />
+        <SingleCard v-for="card in cards" :type="card.archetype"/>
     </div>
 </template>
 
