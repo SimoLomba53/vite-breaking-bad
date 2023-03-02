@@ -2,6 +2,8 @@
 export default {
     props: {
         type: String,
+        name: String,
+        pic:Array,
     }
 }
 
@@ -9,7 +11,15 @@ export default {
 </script>
 
 <template>
-    <h2>{{ type }}</h2>
+    <h2>{{ name }}</h2>
+    <p>{{ type }}</p>
+    <img v-for="image in pic" id="cardimage" :src="image.image_url" alt="">
 </template>
 
-<style scoped></style>
+<style scoped>
+
+#cardimage{
+    width:100px;
+}
+
+</style>
