@@ -1,6 +1,7 @@
 <script>
 import HeaderPart from './components/HeaderPart.vue';
 import MainPart from './components/MainPart.vue';
+import bootstrap from "../package.json";
 import axios from "axios";
 
 export default {
