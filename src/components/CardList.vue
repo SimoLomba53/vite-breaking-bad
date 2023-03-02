@@ -4,7 +4,7 @@ import SingleCard from './SingleCard.vue';
 
 export default {
 
-    props: { cards: Object },
+    props: { cards: Array },
 
 
     components: { SingleCard },
@@ -15,9 +15,10 @@ export default {
 </script>
 
 <template>
-    <div>
+         <div>
         <SingleCard v-for="card in cards" :type="card.archetype"/>
-    </div>
+         </div>
+    
 </template>
 
 <style scoped></style>
